@@ -47,14 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Send login request
     try {
-      let response = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: loginEmail,
-          contactNumber: loginContactNumber,
-        }),
-      });
+      let response = await fetch(
+        "https://bamboozled-v-2-gules.vercel.app/login",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email: loginEmail,
+            contactNumber: loginContactNumber,
+          }),
+        }
+      );
 
       let result = await response.json();
 
